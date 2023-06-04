@@ -35,3 +35,15 @@ ng generate pipe /pipes/sexo
 
 ## Comando para gerar Componentes
 ng generate component componentes/toolbar
+
+
+## Criando modulo com rotas
+ng g m features/produto --routing
+
+
+## Criando componente de cadastro de produto
+ng g c features/produto/cadastro
+
+
+## Criando componente de listagem de produto
+ng g c features/produto/listagem
