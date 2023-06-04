@@ -1,10 +1,19 @@
 import { Component } from '@angular/core';
+import { MatTable, MatTableDataSource } from '@angular/material/table';
+
+export interface Pessoas {
+  nome: string;
+  idade: number;
+  sexo: string;
+  salario: number;
+}
 
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.scss']
 })
+
 export class HomeComponent {
 
     // title = 'Bem-vindo ao treinamento de Angular';
@@ -15,7 +24,7 @@ export class HomeComponent {
     imgUrl = "https://appito.com/assets/img/logo-termos.png";
   
     // ng for 
-    clientes = [{
+    clientes: Pessoas[] = [{
       nome: 'Gabriel',
       sexo: 'M',
       idade: 26,
@@ -37,7 +46,7 @@ export class HomeComponent {
       nome: 'Primo',
       sexo: 'M',
       idade: 46,
-      salario: 750
+      salario: 75000
     }
   
   ]
@@ -45,4 +54,7 @@ export class HomeComponent {
   chamarFuncao(){
     console.log("Esse e o um click");
   }
+
+  displayedColumns: string[] = ['nome', 'sexo', 'idade', 'salario'];
+  dataSource = new MatTableDataSource(this.clientes);  
 }
