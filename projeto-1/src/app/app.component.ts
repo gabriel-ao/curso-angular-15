@@ -18,19 +18,19 @@ export class AppComponent implements
 
   
   constructor (){
-    console.log("Component constructor");
+    // console.log("Component constructor");
   }
 
   ngAfterContentChecked(): void {
-    console.log("Component Content Checked");
+    // console.log("Component Content Checked");
   }
   
   ngAfterViewChecked(): void {
-    console.log("Component View Checked");
+    // console.log("Component View Checked");
   }
 
   ngAfterViewInit(): void {
-    console.log("Component View Init");
+    // console.log("Component View Init");
   }
 
   ngOnInit(): void {
@@ -39,15 +39,15 @@ export class AppComponent implements
   }
 
   ngOnChanges(): void {
-    console.log("Component ngOnChanges");
+    // console.log("Component ngOnChanges");
   }
 
   ngDoCheck(): void {
-    console.log("Component ngDoCheck");
+    // console.log("Component ngDoCheck");
   }
 
   ngAfterContentInit(): void {
-    console.log("Component Content Init");
+    // console.log("Component Content Init");
   }
 
 

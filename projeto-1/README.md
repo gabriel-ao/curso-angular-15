@@ -47,3 +47,7 @@ ng g c features/produto/cadastro
 
 ## Criando componente de listagem de produto
 ng g c features/produto/listagem
+
+
+## Criando arquivo de produto
+ng g s features/produto/services/produto

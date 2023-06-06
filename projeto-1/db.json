@@ -1,0 +1,39 @@
+{
+  "produtos": [
+    {
+      "nome": "Teclado Gamer",
+      "descricao": "Teclado gamer RGB multi-devices",
+      "imagemUrl": "",
+      "preco": "150",
+      "estoque": 12
+    }
+  ],
+
+  "clientes": [
+    {
+      "nome": "Gabriel",
+      "sexo": "M",
+      "idade": 26,
+      "salario": 750
+    },
+  {
+    "nome": "Alex",
+    "sexo": "M",
+    "idade": 46,
+    "salario": 750
+  },
+  {
+    "nome": "Leonardo",
+    "sexo": "F",
+    "idade": 46,
+    "salario": 750
+  },
+  {
+    "nome": "Primo",
+    "sexo": "M",
+    "idade": 46,
+    "salario": 75000
+  }
+
+]
+}
