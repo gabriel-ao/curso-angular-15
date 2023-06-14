@@ -51,3 +51,6 @@ ng g c features/produto/listagem
 
 ## Criando arquivo de produto
 ng g s features/produto/services/produto
+
+## Criando componente de home
+ng g s componentes/services/home
