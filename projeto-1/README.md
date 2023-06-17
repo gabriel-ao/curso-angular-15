@@ -54,3 +54,7 @@ ng g s features/produto/services/produto
 
 ## Criando componente de home
 ng g s componentes/services/home
+
+## Executando o json server - executar esse comando na pasta que tiver um db.json
+
+json-server --watch db.json
