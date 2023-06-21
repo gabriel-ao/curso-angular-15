@@ -56,5 +56,6 @@ ng g s features/produto/services/produto
 ng g s componentes/services/home
 
 ## Executando o json server - executar esse comando na pasta que tiver um db.json
-
+# http://localhost:3000/clientes
+# http://localhost:3000/produtos
 json-server --watch db.json
