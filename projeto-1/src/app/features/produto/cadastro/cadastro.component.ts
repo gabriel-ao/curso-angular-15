@@ -3,6 +3,7 @@ import { ProdutoService } from '../services/produto.service';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Produto } from '../models/produto.model';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { criarSenhaForte } from '../validacoes/criarSenhaForte';
 
 @Component({
   selector: 'app-cadastro',
@@ -44,6 +45,8 @@ export class CadastroComponent implements OnInit{
           this.produto = produto;
           this.formCadastroProduto.controls['nome'].setValue(this.produto.nome)
           this.formCadastroProduto.controls['descricao'].setValue(this.produto.descricao)
+          this.formCadastroProduto.controls['email'].setValue(this.produto.email)
+          this.formCadastroProduto.controls['password'].setValue(this.produto.password)
           this.formCadastroProduto.controls['estoque'].setValue(this.produto.estoque)
           this.formCadastroProduto.controls['preco'].setValue(this.produto.preco)
           this.tituloPagina =`Editar produto`;
@@ -62,7 +65,10 @@ export class CadastroComponent implements OnInit{
   criarFormulario(){
     this.formCadastroProduto = this.formBuilder.group({
           nome: ['', Validators.required],
-          descricao: ['', Validators.required],
+          descricao: ['', [Validators.required]],
+          email: ['', [Validators.required, Validators.email]],
+          // email: ['', [Validators.required, Validators.pattern("/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/.")]],
+          password: ['', [Validators.required, Validators.minLength(4), criarSenhaForte()]],
           preco: ['', Validators.required],
           estoque: [0, Validators.required]
     })
@@ -78,6 +84,8 @@ export class CadastroComponent implements OnInit{
       id: parseInt(this.id),
       nome: this.formCadastroProduto.controls['nome'].value,
       descricao: this.formCadastroProduto.controls['descricao'].value,
+      email: this.formCadastroProduto.controls['email'].value,
+      password: this.formCadastroProduto.controls['password'].value,
       estoque: this.formCadastroProduto.controls['estoque'].value,
       preco: this.formCadastroProduto.controls['preco'].value
     }

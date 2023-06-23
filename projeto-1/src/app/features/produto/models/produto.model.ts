@@ -3,6 +3,8 @@ export interface Produto {
     nome: string;
     descricao: string;
     imagemUrl?: string;
+    email?: string;
+    password: string;
     preco: string;
     estoque: number;
 }

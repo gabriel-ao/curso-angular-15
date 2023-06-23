@@ -12,6 +12,20 @@
             <mat-label>Preço</mat-label>
             <input matInput placeholder="Digite um preço" formControlName="preco">
             <mat-error>Favor informe um preço</mat-error>
+        </mat-form-field>    
+
+        <mat-form-field class="example-full-width">
+            <mat-label>Email</mat-label>
+            <input matInput placeholder="Digite um email" formControlName="email">
+            <mat-error>Favor informe um email</mat-error>
+        </mat-form-field>
+
+        <mat-form-field class="example-full-width">
+            <mat-label>Password</mat-label>
+            <input type="password" matInput placeholder="Digite uma senha" formControlName="password">
+            <mat-error *ngIf="password?.erros.required">Favor informe uma senha</mat-error>
+            <mat-error *ngIf="">A senha tem que ter pelomenos 8 caracteres</mat-error>
+            <mat-error *ngIf="">A senha tem que ter caracter MAIUSCULOS minusculo e numer0s</mat-error>
         </mat-form-field>
 
         <mat-form-field class="example-full-width">

@@ -4,6 +4,7 @@
       "id": 1,
       "nome": "Teclado Gamer ",
       "descricao": "Teclado gamer RGB multi-devices",
+      "email": "teclado@email.com",
       "estoque": 12,
       "preco": "150",
       "imagemUrl": "https://m.media-amazon.com/images/I/61nvk16RZrL._AC_SX679_.jpg"
