@@ -1,27 +1,31 @@
 <h1 class="tituloPagina">{{tituloPagina}}</h1>
 
 <div class="center-gab">
-    <form class="example-form">
+    <form class="example-form" [formGroup]="formCadastroProduto">
         <mat-form-field class="example-full-width">
             <mat-label>Titulo</mat-label>
-            <input matInput placeholder="Titulo do produto" [(ngModel)]="nome" [ngModelOptions]="{standalone: true}">
+            <input matInput placeholder="Titulo do produto" min="3" formControlName="nome">
+            <mat-error>Favor informe um titulo</mat-error>
         </mat-form-field>
     
         <mat-form-field class="example-full-width">
             <mat-label>Preço</mat-label>
-            <input matInput placeholder="Digite um preço"  [(ngModel)]="preco"  [ngModelOptions]="{standalone: true}">
+            <input matInput placeholder="Digite um preço" formControlName="preco">
+            <mat-error>Favor informe um preço</mat-error>
         </mat-form-field>
 
         <mat-form-field class="example-full-width">
             <mat-label>Estoque</mat-label>
-            <input type="number" matInput placeholder="Digite a quantidade"  [(ngModel)]="estoque"  [ngModelOptions]="{standalone: true}">
+            <input type="number" matInput placeholder="Digite a quantidade" formControlName="estoque">
+            <mat-error>Favor informe um estoque</mat-error>
         </mat-form-field>
     
         <mat-form-field class="example-full-width">
             <mat-label>Descrição</mat-label>
-            <textarea matInput placeholder="Descreva o produto"  [(ngModel)]="descricao"  [ngModelOptions]="{standalone: true}"></textarea>
+            <textarea matInput placeholder="Descreva o produto" formControlName="descricao"></textarea>
+            <mat-error>Favor informe a descrição</mat-error>
         </mat-form-field>
     
-        <button mat-raised-button color="primary" (click)="salvarProduto()"> Salvar </button>
+        <button mat-raised-button color="primary" (click)="salvarProduto()" [disabled]="!formCadastroProduto.valid"> Salvar </button>
     </form>
 </div>

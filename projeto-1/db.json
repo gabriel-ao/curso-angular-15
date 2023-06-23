@@ -2,11 +2,11 @@
   "produtos": [
     {
       "id": 1,
-      "nome": "Teclado Gamer",
+      "nome": "Teclado Gamer ",
       "descricao": "Teclado gamer RGB multi-devices",
-      "imagemUrl": "https://m.media-amazon.com/images/I/61nvk16RZrL._AC_SX679_.jpg",
+      "estoque": 12,
       "preco": "150",
-      "estoque": 12
+      "imagemUrl": "https://m.media-amazon.com/images/I/61nvk16RZrL._AC_SX679_.jpg"
     },
     {
       "id": 2,
