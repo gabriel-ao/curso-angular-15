@@ -25,3 +25,28 @@ Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To u
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+
+
+
+executar o db.json
+json-server --watch db.json
+
+http://localhost:3000/posts
+http://localhost:3000/comments
+http://localhost:3000/profile
+
+
+
+  
+
+// Dashboard entradas, saidas e saldo
+
+// cadastro de categorias {id, titulo, descricao } = CRUD tela de cadastro, atualizacao, listagem de categorias e exclusao
+
+// entrada ou saida { id, descricao, tipo, valor, status { pago, pendente }}
+
+
+
+## Criando serviço em sherad
+
+ng g s shared/base/http-base
