@@ -1,0 +1,22 @@
+.example-spacer {
+    flex: 1 1 auto;
+  }
+
+.manu-item {
+    a {
+        text-decoration: none;
+        margin: 10px;
+    }
+}
+
+a:hover {
+    color: rgb(84, 83, 83);
+}
+
+.active {
+    color: rgb(149, 113, 227);
+}
+
+a {
+    color: #000;
+}

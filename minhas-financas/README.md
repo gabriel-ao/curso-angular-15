@@ -48,5 +48,8 @@ http://localhost:3000/profile
 
 
 ## Criando serviço em sherad
-
 ng g s shared/base/http-base
+
+
+## Criando serviço dashboard
+ng g s features/dashboard/service/dashboard
