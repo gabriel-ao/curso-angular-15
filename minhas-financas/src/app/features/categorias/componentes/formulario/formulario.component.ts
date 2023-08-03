@@ -45,4 +45,22 @@ export class FormularioComponent implements OnInit {
     );
   }
 
+  salvarCategoria() {
+    if(this.formCategoria.touched && this.formCategoria.dirty){
+      // NOTA: dirty e touched verifica se os campos foram alterados
+
+      const payload = {
+        id: this.categoria.id,
+        nome: this.formCategoria.controls['nome'].value,
+        descricao: this.formCategoria.controls['descricao'].value,
+      };
+
+      this.categoriaService.alterarCategoria(payload)
+      .subscribe((resposta: any) => {
+        // Retornar a tela anterior
+        this.router.navigate(['categorias']);
+      });
+    }
+  }
+
 }
