@@ -5,6 +5,7 @@ import { FormularioComponent } from './componentes/formulario/formulario.compone
 
 const routes: Routes = [
   { path: '', component: ListComponent},
+  { path: 'nova-categoria', component: FormularioComponent},
   { path: 'editar/:id', component: FormularioComponent}
 ];
 

@@ -49,4 +49,7 @@ export class ListComponent implements AfterViewInit, OnInit{
     })
   }
 
+  novaCategoria(){
+    this.router.navigate(['categorias', 'nova-categoria']);
+  }
 }
