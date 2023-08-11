@@ -53,3 +53,11 @@ ng g s shared/base/http-base
 
 ## Criando serviço dashboard
 ng g s features/dashboard/service/dashboard
+
+
+
+## Entradas
+ng g m features/entradas --routing
+ng g c features/entradas/components/list
+ng g c features/entradas/components/formulario
+ng g s features/entradas/service/entradas
